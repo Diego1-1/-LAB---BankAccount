@@ -26,21 +26,18 @@ public class CuentaAhorro extends CuentaBancaria{
             System.out.println("Error: El monto a retirar debe ser positivo.");
             return;
         }
-
         if (this.getSaldo() >= monto){
-            System.out.println("Retiro autorizado: " + monto);
+            System.out.println("Retiro autorizado: " + formatear(monto));
             double nuevoSaldo = getSaldo() - monto;
             setSaldo(nuevoSaldo);
         }else{
             System.out.println("Saldo insuficiente. Ingrese un valor menor.");
-
         }
     }
+
+    //Sobrecarga
     public void mostrarInfo(){
-        System.out.println("Número de cuenta: " + this.getNumeroCuenta());
-        System.out.println("Titular de cuenta: " + this.getTitular());
-        System.out.println("Saldo: " + this.getSaldo());
-        System.out.println("Tasa de interés: " + tasaInteres);
+        super.mostrarInfo();
         System.out.println("Fecha de apertura: " + fechaApertura);
     }
 

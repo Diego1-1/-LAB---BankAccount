@@ -56,8 +56,8 @@ public abstract class CuentaBancaria {
         }
 
         saldo += monto;
-        System.out.println("Monto despositado: " + String.format("$%, .2f", monto));
-        System.out.println("Nuevo saldo: " + String.format("$%, .2f", saldo));
+        System.out.println("Monto despositado: " +formatear(monto));
+        System.out.println("Nuevo saldo: " + formatear(saldo));
     }
 
     public abstract void retirar(double monto);
@@ -74,7 +74,7 @@ public abstract class CuentaBancaria {
     public void mostrarInfo(){
         System.out.println("Número de cuenta: " + numeroCuenta);
         System.out.println("Titular de cuenta: " + titular);
-        System.out.println("Saldo: " + saldo);
+        System.out.println("Saldo: " + formatear(saldo));
         System.out.println("Tasa de interés: " + tasaInteres);
     }
 
