@@ -6,7 +6,6 @@ public abstract class CuentaBancaria {
     private final String titular;
     private double saldo;
     private final double tasaInteres;
-
     //Constructor:
 
     public CuentaBancaria(String numeroCuenta, String titular, double saldo, double tasaInteres) {
